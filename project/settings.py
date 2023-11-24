@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'apps.file',
     'apps.mail',
     'apps.user',
+    'apps.product',
 ]
 
 MIDDLEWARE = [
