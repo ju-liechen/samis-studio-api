@@ -25,3 +25,11 @@ class AdminRecordsTests(APITestCase):
                          self.product_1.id)
         self.assertEqual(response.data['results'][1]['id'],
                          self.product_2.id)
+
+    def test_public_products_detail(self):
+        url = reverse(
+            'public-products-detail',
+            kwargs={'pk': self.product_1.id})
+        response = self.client.get(url, format='json')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data['id'], self.product_1.id)

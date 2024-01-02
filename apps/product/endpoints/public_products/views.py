@@ -9,3 +9,9 @@ class PublicProductsListView(generics.ListAPIView):
     serializer_class = PublicProductSerializer
     permission_classes = [AllowAny]
     queryset = Product.objects.all()
+
+
+class PublicProductsDetailView(generics.RetrieveAPIView):
+    serializer_class = PublicProductSerializer
+    permission_classes = [AllowAny]
+    queryset = Product.objects.all()
