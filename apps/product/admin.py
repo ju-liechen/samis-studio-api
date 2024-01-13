@@ -17,6 +17,8 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'width',
         'length',
+        'on_hold',
+        'is_sold',
         'image',
         'image_tag_full',
     )
